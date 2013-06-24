@@ -22,9 +22,34 @@ For a folder that represents a github url, this will attempt to return the "orig
 
 Takes a github url with the optional extension of using `#branch-name` on the end to denote a branch/tag/commit.  It returns an array containing `[user, repo, branch]` where `branch` defaults to `master`.  This can be used to build the GitHub url, a url to the tarball etc. etc.
 
+### github.tarball
+
+### github.webpage
+
+### gist(url)
+
+Returns the hash of a gist.
+
+### gist.tarball
+
+### gist.webpage
+
 ### normalize(url)
 
 Currently just a pass through, but the aim will be to get git urls as close as possible to some normal form.  In particular, it should do the work required by npm's [addRemoteGit](https://github.com/isaacs/npm/blob/master/lib/cache.js#L392-L413)
+
+### isGitUrl(url)
+
+Checks if a url is a git url
+
+### isGithubUrl(url)
+
+Checks if a url is a GitHub url
+
+### isGistUrl(url)
+
+Checks if a url is a GitHub gist url
+
 
 ## License
 
