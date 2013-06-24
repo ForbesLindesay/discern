@@ -1,6 +1,6 @@
 {
   "name": "discern",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Discern information about git and github urls.",
   "devDependencies": {
     "mocha": "*"
