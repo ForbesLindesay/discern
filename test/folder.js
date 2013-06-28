@@ -25,8 +25,9 @@ describe('discern.sync(path)', function () {
     var res = folderSync(__dirname + '/../')
     assert.ok(/discern.git$/.test(res))
   })
-  it('should return null in case of an error', function () {
-    var res = folderSync(__dirname + './enteEnteEnte')
-    assert.ok(res === null)
+  it('should throw in case of an error', function () {
+    assert.throws(function () {
+      var res = folderSync(__dirname + './enteEnteEnte')
+    }, /ENOENT/)
   })
 })
