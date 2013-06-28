@@ -7,6 +7,11 @@ describe('github(url)', function(){
     assert.deepEqual(parse(url), ['jamesor', 'mongoose-versioner', 'master']);
   })
 
+  it('should support ssh', function(){
+    var url = 'git@github.com:ForbesLindesay/discern.git';
+    assert.deepEqual(parse(url), ['ForbesLindesay', 'discern', 'master']);
+  })
+
   it('should support git://*.git', function(){
     var url = 'git://github.com/treygriffith/cellar.git';
     assert.deepEqual(parse(url), ['treygriffith', 'cellar', 'master']);

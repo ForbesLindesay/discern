@@ -19,6 +19,10 @@ describe('isGitUrl(url)', function () {
     var url = 'http://github.com/jamesor/mongoose-versioner'
     assert.ok(isGitUrl(url) === false)
   })
+  it('should support ssh', function(){
+    var url = 'git@github.com:ForbesLindesay/discern.git';
+    assert.ok(isGitUrl(url), ['ForbesLindesay', 'discern', 'master'])
+  })
 })
 
 var isGistUrl = discern.isGistUrl
@@ -41,6 +45,10 @@ describe('isGitHubUrl(url)', function () {
   })
   it('should support github urls', function () {
     var url = 'https://github.com/robertkowalski/892z34hjk324h24234/'
+    assert.ok(isGitHubUrl(url))
+  })
+  it('should support ssh', function(){
+    var url = 'git@github.com:ForbesLindesay/discern.git';
     assert.ok(isGitHubUrl(url))
   })
 })
