@@ -26,6 +26,20 @@ Takes a github url with the optional extension of using `#branch-name` on the en
 
 Currently just a pass through, but the aim will be to get git urls as close as possible to some normal form.  In particular, it should do the work required by npm's [addRemoteGit](https://github.com/isaacs/npm/blob/master/lib/cache.js#L392-L413)
 
+### isGitUrl(url)
+
+Returns `true` if the url has a protocol of 'git:', 'git+http:', 'git+https:', 'git+rsync:', 'git+ftp:', 'git+ssh:' or path ending in '.git'.
+
+Returns `false` otherwise.
+
+### isGistUrl(url)
+
+Returns `true` if the url is a `gist.github.com` url, otherwise `false`.
+
+### isGitHubUrl(url)
+
+Returns `true` if the url is a `github.com` url, otherwise `false`.
+
 ## License
 
 MIT
