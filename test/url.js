@@ -1,7 +1,7 @@
 var assert = require('assert')
-var testUrl = require('../').testUrl
+var discern = require('../')
 
-var isGitUrl = testUrl.isGitUrl
+var isGitUrl = discern.isGitUrl
 describe('isGitUrl(url)', function () {
   it('should support git://*', function () {
     var url = 'git://github.com/jamesor/mongoose-versioner'
@@ -11,13 +11,17 @@ describe('isGitUrl(url)', function () {
     var url = 'git+ssh://github.com/jamesor/mongoose-versioner'
     assert.ok(isGitUrl(url))
   })
+  it('should support *.git', function () {
+    var url = 'http://github.com/jamesor/mongoose-versioner.git'
+    assert.ok(isGitUrl(url))
+  })
   it('should return false for http://*', function () {
     var url = 'http://github.com/jamesor/mongoose-versioner'
     assert.ok(isGitUrl(url) === false)
   })
 })
 
-var isGistUrl = testUrl.isGistUrl
+var isGistUrl = discern.isGistUrl
 describe('isGistUrl(url)', function () {
   it('should return false for other urls than github-gist', function () {
     var url = 'git://github.com/jamesor/mongoose-versioner'
@@ -26,5 +30,17 @@ describe('isGistUrl(url)', function () {
   it('should support github-gist urls', function () {
     var url = 'https://gist.github.com/robertkowalski/892z34hjk324h24234/'
     assert.ok(isGistUrl(url))
+  })
+})
+
+var isGitHubUrl = discern.isGitHubUrl
+describe('isGitHubUrl(url)', function () {
+  it('should return false for other urls than github', function () {
+    var url = 'git://gist.github.com/jamesor/mongoose-versioner'
+    assert.ok(isGitHubUrl(url) === false)
+  })
+  it('should support github urls', function () {
+    var url = 'https://github.com/robertkowalski/892z34hjk324h24234/'
+    assert.ok(isGitHubUrl(url))
   })
 })
