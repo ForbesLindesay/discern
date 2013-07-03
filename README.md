@@ -16,7 +16,8 @@ $ npm install discern
 
 ### folder(dir, callback) / folder.sync(dir)
 
-For a folder that represents a github url, this will attempt to return the "origin" remote.  On failure, it returns null.
+For a folder that represents a github url, this will attempt to return the "origin" remote.
+On failure, the callback of the async version returns an error. In case of the synchronous version it will throw an Exception.
 
 ### github(url)
 
