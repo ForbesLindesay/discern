@@ -21,7 +21,7 @@ describe('isGitUrl(url)', function () {
   })
   it('should support ssh', function(){
     var url = 'git@github.com:ForbesLindesay/discern.git';
-    assert.ok(isGitUrl(url), ['ForbesLindesay', 'discern', 'master'])
+    assert.ok(isGitUrl(url))
   })
 })
 
@@ -50,5 +50,9 @@ describe('isGitHubUrl(url)', function () {
   it('should support ssh', function(){
     var url = 'git@github.com:ForbesLindesay/discern.git';
     assert.ok(isGitHubUrl(url))
+  })
+  it('should not support wrong urls', function(){
+    var url = 'git@githsub.com:ForbesLindesay/discern.git';
+    assert.ok(isGitHubUrl(url) === false)
   })
 })
