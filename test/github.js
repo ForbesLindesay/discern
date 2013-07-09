@@ -17,11 +17,6 @@ describe('github(url)', function(){
     assert.deepEqual(parse(url), ['treygriffith', 'cellar', 'master']);
   })
 
-  it('should support git+ssh://*', function(){
-    var url = 'git+ssh://github.com/treygriffith/cellar.git'
-    assert.deepEqual(parse(url), ['treygriffith', 'cellar', 'master'])
-  })
-
   it('should support https://*', function(){
     var url = 'https://github.com/Empeeric/i18n-node';
     assert.deepEqual(parse(url), ['Empeeric', 'i18n-node', 'master']);
@@ -54,6 +49,11 @@ describe('github(url)', function(){
 
   it('should return null on failure', function(){
     var url = 'git://github.com/justgord/.git';
+    assert.deepEqual(parse(url), null);
+  })
+
+  it('should not support @github.com/Empeeric/i18n-node', function(){
+    var url = '@github.com/Empeeric/i18n-node';
     assert.deepEqual(parse(url), null);
   })
 })
