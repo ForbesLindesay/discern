@@ -23,6 +23,10 @@ describe('isGitUrl(url)', function () {
     var url = 'git@github.com:ForbesLindesay/discern.git';
     assert.ok(isGitUrl(url))
   })
+  it('should support git+file://', function () {
+    var url = 'git+file:///foo';
+    assert.ok(isGitUrl('git+file:///foo'))
+  })
 })
 
 var isGistUrl = discern.isGistUrl
