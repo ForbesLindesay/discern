@@ -2,9 +2,9 @@
 
 Discern information about git and github urls.
 
-[![Build Status](https://travis-ci.org/ForbesLindesay/discern.png?branch=master)](https://travis-ci.org/ForbesLindesay/discern)
-[![Dependency Status](https://gemnasium.com/ForbesLindesay/discern.png)](https://gemnasium.com/ForbesLindesay/discern)
-[![NPM version](https://badge.fury.io/js/discern.png)](http://badge.fury.io/js/discern)
+[![Build Status](https://img.shields.io/travis/ForbesLindesay/discern/master.svg)](https://travis-ci.org/ForbesLindesay/discern)
+[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/discern.svg)](https://gemnasium.com/ForbesLindesay/discern)
+[![NPM version](https://img.shields.io/npm/v/discern.svg)](http://badge.fury.io/js/discern)
 
 ## Installation
 
