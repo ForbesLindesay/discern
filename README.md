@@ -3,8 +3,8 @@
 Discern information about git and github urls.
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/discern/master.svg)](https://travis-ci.org/ForbesLindesay/discern)
-[![Dependency Status](https://img.shields.io/gemnasium/ForbesLindesay/discern.svg)](https://gemnasium.com/ForbesLindesay/discern)
-[![NPM version](https://img.shields.io/npm/v/discern.svg)](http://badge.fury.io/js/discern)
+[![Dependency Status](https://img.shields.io/david/ForbesLindesay/discern.svg)](https://david-dm.org/ForbesLindesay/discern)
+[![NPM version](https://img.shields.io/npm/v/discern.svg)](https://www.npmjs.com/package/discern)
 
 ## Installation
 
