@@ -1,5 +1,7 @@
 # Discern
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ForbesLindesay/discern.svg)](https://greenkeeper.io/)
+
 Discern information about git and github urls.
 
 [![Build Status](https://img.shields.io/travis/ForbesLindesay/discern/master.svg)](https://travis-ci.org/ForbesLindesay/discern)
