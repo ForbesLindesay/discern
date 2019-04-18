@@ -3,7 +3,7 @@
   "version": "1.1.2",
   "description": "Discern information about git and github urls.",
   "devDependencies": {
-    "mocha": "*"
+    "mocha": ">=6.1.4"
   },
   "scripts": {
     "test": "mocha -R spec"
